@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+use Dancer2;
+use GRID;
+get '/ckd/:grid' => sub {
+    return GRID::getckd(params->{grid}) ;
+};
+dance;
